@@ -13,7 +13,7 @@ function Gallery() {
 
   return (
     <Element name="gallery">
-      <section className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-screen mb-[50px]">
+      <section className="relative w-full h-[75vh] sm:h-[50vh] md:h-[60vh] lg:h-screen mb-[50px]">
         <img
           src={activeImage}
           alt="Gallery"
@@ -22,7 +22,7 @@ function Gallery() {
 
         <div className="absolute inset-0 bg-black/20"></div>
 
-        <div className="absolute bottom-4 left-1/2 z-10 -translate-x-1/2 lg:bottom-8">
+        <div className="absolute inset-0 z-10 flex items-center justify-center lg:items-end lg:pb-8">
           <div className="flex flex-col items-center gap-2 rounded-lg bg-black/40 p-2 backdrop-blur-sm lg:flex-row lg:gap-5">
             {images.map((image, index) => (
               <button
