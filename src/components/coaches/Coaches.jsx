@@ -25,7 +25,7 @@ function Coaches() {
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:mt-20 lg:grid-cols-4 lg:gap-8">
+          <div className="mt-12 grid grid-cols-1 justify-items-center gap-6 sm:grid-cols-2 sm:justify-items-center md:gap-8 lg:mt-20 lg:grid-cols-4 lg:justify-items-stretch lg:gap-8">
             {coaches.map((coach) => (
               <CoachCard
                 key={coach.id}
