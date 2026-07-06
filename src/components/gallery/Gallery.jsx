@@ -22,13 +22,13 @@ function Gallery() {
 
         <div className="absolute inset-0 bg-black/20"></div>
 
-        <div className="absolute bottom-4 left-0 right-0 z-10 flex justify-center lg:bottom-8">
-          <div className="flex max-w-full gap-2 overflow-x-auto rounded-lg bg-black/40 p-2 backdrop-blur-sm sm:gap-3 lg:gap-5">
+        <div className="absolute bottom-4 left-0 right-0 z-10 px-4 lg:bottom-8">
+          <div className="mx-auto flex max-w-fit flex-wrap justify-center gap-2 rounded-lg bg-black/40 p-2 backdrop-blur-sm lg:flex-nowrap lg:gap-5">
             {images.map((image, index) => (
               <button
                 key={index}
                 onClick={() => setActiveImage(image)}
-                className={`h-[70px] w-[120px] flex-shrink-0 overflow-hidden transition-all duration-300 sm:h-[90px] sm:w-[150px] lg:h-[106px] lg:w-[182px] ${
+                className={`h-[70px] w-[120px] overflow-hidden transition-all duration-300 sm:h-[90px] sm:w-[150px] lg:h-[106px] lg:w-[182px] ${
                   activeImage === image
                     ? "scale-105 ring-2 ring-white"
                     : "opacity-70 hover:opacity-100"
