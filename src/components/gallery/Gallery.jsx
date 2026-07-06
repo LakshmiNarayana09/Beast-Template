@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { Element } from "react-scroll";
-import img1 from '../../assets/gallery/img1.png'
-import img2 from '../../assets/gallery/img2.png'
-import img3 from '../../assets/gallery/img3.png'
-import img4 from '../../assets/gallery/img4.png'
-import img5 from '../../assets/gallery/img5.png'
-
+import img1 from "../../assets/gallery/img1.png";
+import img2 from "../../assets/gallery/img2.png";
+import img3 from "../../assets/gallery/img3.png";
+import img4 from "../../assets/gallery/img4.png";
+import img5 from "../../assets/gallery/img5.png";
 
 function Gallery() {
   const images = [img2, img1, img3, img4, img5];
@@ -13,7 +12,7 @@ function Gallery() {
 
   return (
     <Element name="gallery">
-      <section className="relative w-full h-[75vh] sm:h-[50vh] md:h-[60vh] lg:h-screen mb-[50px]">
+      <section className="relative mb-[50px] h-[60vh] w-full sm:h-[70vh] lg:h-screen">
         <img
           src={activeImage}
           alt="Gallery"
@@ -22,13 +21,13 @@ function Gallery() {
 
         <div className="absolute inset-0 bg-black/20"></div>
 
-        <div className="absolute inset-0 z-10 flex items-center justify-center lg:items-end lg:pb-8">
-          <div className="flex flex-col items-center gap-2 rounded-lg bg-black/40 p-2 backdrop-blur-sm lg:flex-row lg:gap-5">
+        <div className="absolute bottom-4 left-1/2 z-10 -translate-x-1/2 lg:bottom-8">
+          <div className="flex justify-center gap-2 rounded-lg bg-black/40 p-2 backdrop-blur-sm lg:gap-5">
             {images.map((image, index) => (
               <button
                 key={index}
                 onClick={() => setActiveImage(image)}
-                className={`h-[70px] w-[120px] overflow-hidden transition-all duration-300 lg:h-[106px] lg:w-[182px] ${
+                className={`h-[55px] w-[80px] overflow-hidden transition-all duration-300 sm:h-[70px] sm:w-[120px] lg:h-[106px] lg:w-[182px] ${
                   activeImage === image
                     ? "scale-105 ring-2 ring-white"
                     : "opacity-70 hover:opacity-100"
@@ -48,4 +47,4 @@ function Gallery() {
   );
 }
 
-export default Gallery
+export default Gallery;
