@@ -34,7 +34,7 @@ function Schedule() {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-20 lg:grid-cols-4 lg:gap-8">
+        <div className="mt-12 grid grid-cols-1 justify-items-center gap-6 sm:grid-cols-2 sm:justify-items-center lg:mt-20 lg:grid-cols-4 lg:justify-items-start lg:gap-8">
           <ScheduleDateCard />
 
           {schedule.slice(0, 3).map((item) => (
